@@ -11,6 +11,10 @@
 	<h1>Spring MVC Demo App - Home Page</h1>
 	
 	<a href= "hello/showForm" >Hello World</a>
+	
+	<br><br>
+	
+	<a href= "student/showForm" >Student form</a>
 
 </body>
 </html>
