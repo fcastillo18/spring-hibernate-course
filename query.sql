@@ -10,6 +10,9 @@ select *
 from course
 
 select *
+from student
+
+select *
 from cbs.hlr_service
 where trans_date >= getdate()-10
 
@@ -37,3 +40,5 @@ CREATE TABLE course_student (
 
 CREATE INDEX IDX_COURSE_STUDENT ON course_student (student_id) 
 
+select *
+from course_student

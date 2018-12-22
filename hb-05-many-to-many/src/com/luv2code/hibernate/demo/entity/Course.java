@@ -95,7 +95,7 @@ public class Course {
 		this.reviews = reviews;
 	}
 	
-	public void add(Review theReview) {
+	public void addReview(Review theReview) {
 		if (reviews == null) {
 			reviews = new ArrayList<>();
 		}
@@ -112,7 +112,7 @@ public class Course {
 		this.students = students;
 	}
 	
-	public void add(Student theStudent) {
+	public void addStudent(Student theStudent) {
 		if (students == null) {
 			students = new ArrayList<>();
 		}

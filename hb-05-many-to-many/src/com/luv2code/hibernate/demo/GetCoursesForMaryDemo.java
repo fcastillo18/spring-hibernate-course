@@ -8,8 +8,9 @@ import com.luv2code.hibernate.demo.entity.Course;
 import com.luv2code.hibernate.demo.entity.Instructor;
 import com.luv2code.hibernate.demo.entity.InstructorDetail;
 import com.luv2code.hibernate.demo.entity.Review;
+import com.luv2code.hibernate.demo.entity.Student;
 
-public class CreateCourseAndReviewsDemo {
+public class GetCoursesForMaryDemo {
 
 	public static void main(String[] args) {
 		//Create session factory
@@ -19,6 +20,7 @@ public class CreateCourseAndReviewsDemo {
 								.addAnnotatedClass(InstructorDetail.class)
 								.addAnnotatedClass(Course.class)
 								.addAnnotatedClass(Review.class)
+								.addAnnotatedClass(Student.class)
 								.buildSessionFactory();
 		//create session
 		Session session = factory.getCurrentSession();
@@ -28,19 +30,25 @@ public class CreateCourseAndReviewsDemo {
 			//start transacction
 			session.beginTransaction();
 			
-			//create course
-			Course tempCourse = new Course("Pacman - How to score one Million Points");
+			//get the student
+			int studentId = 10;
+			Student tempStudent = session.get(Student.class, studentId);
 			
-			//add some reviews
-			tempCourse.add(new Review("Great course... love it!"));
-			tempCourse.add(new Review("Cool course, job well done"));
-			tempCourse.add(new Review("What a dumb course, your are an idiot"));
+			System.out.println("\nLoaded student: "+ tempStudent);
+			System.out.println("Courses: "+ tempStudent.getCourses());
 			
-			//save the course
-			System.out.println("Saving the course");
-			System.out.println(tempCourse);
-			System.out.println(tempCourse.getReviews());
-			session.save(tempCourse);
+			//create more courses
+			Course tempCourse1 =  new Course("Rubik's Cube - How to speed cube");
+			Course tempCourse2 =  new Course("Atari 2600 - Game dev");
+			
+			//add student to courses
+			tempCourse1.addStudent(tempStudent);
+			tempCourse2.addStudent(tempStudent);
+			
+			//save the courses
+			System.out.println("\nSaving the courses");
+			session.save(tempCourse1);
+			session.save(tempCourse2);
 			
 			//commit the transaction
 			session.getTransaction().commit();
