@@ -22,11 +22,20 @@ public class TestDbServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "jdbc:sqlserver://172.27.17.156:1433;DatabaseName=Winplexdb";
-        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        String userName = "winplex";
-        String password = "codetel";
-        
+//		String url = "jdbc:sqlserver://172.27.17.156:1433;DatabaseName=Winplexdb";
+//        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+//        String userName = "winplex";
+//        String password = "codetel";
+		String url = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&amp;serverTimezone=UTC";
+        String driver = "com.mysql.jdbc.Driver";
+        String userName = "springstudent";
+        String password = "springstudent";
+        /*
+         * 
+         * <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&amp;serverTimezone=UTC" />
+        <property name="user" value="springstudent" />
+        <property name="password" value="springstudent" /> */
 		try {
 			PrintWriter out = response.getWriter();
 			
