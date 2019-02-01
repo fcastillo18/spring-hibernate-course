@@ -11,6 +11,7 @@
 	<link type="text/css"
 		  rel ="stylesheet"
 		  href="${pageContext.request.contextPath}/resources/css/style.css"/>
+		  
 </head>
 <body>
 	
@@ -20,6 +21,13 @@
 		</div>
 		
 		<div id="content">
+			
+			<!-- new button -->
+			<input type="button" value="Add Customer"
+				   onclick="window.location.href='showFormForAdd'; return false;"
+				   class="add-button"
+			/>
+		
 			<!-- add out html table -->
 			
 			<table>
