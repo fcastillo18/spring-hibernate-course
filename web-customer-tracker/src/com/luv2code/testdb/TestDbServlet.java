@@ -26,7 +26,7 @@ public class TestDbServlet extends HttpServlet {
 //        String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 //        String userName = "winplex";
 //        String password = "codetel";
-		String url = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&amp;serverTimezone=UTC";
+		String url = "jdbc:mysql://127.0.0.1:3306/web_customer_tracker?useSSL=false&amp";
         String driver = "com.mysql.jdbc.Driver";
         String userName = "springstudent";
         String password = "springstudent";
