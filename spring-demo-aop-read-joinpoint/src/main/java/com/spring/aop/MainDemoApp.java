@@ -13,9 +13,9 @@ public class MainDemoApp {
 		AnnotationConfigApplicationContext context =
 				new AnnotationConfigApplicationContext(DemoConfig.class);
 		
-		MembershipDAO theMembershipDAO = context.getBean("membershipDAO",MembershipDAO.class);
-		theMembershipDAO.addAcount();
-		theMembershipDAO.goToSleep();
+//		MembershipDAO theMembershipDAO = context.getBean("membershipDAO",MembershipDAO.class);
+//		theMembershipDAO.addAcount();
+//		theMembershipDAO.goToSleep();
 		
 		
 		//get the bean from spring container
