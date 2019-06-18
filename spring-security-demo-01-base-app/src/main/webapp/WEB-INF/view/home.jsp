@@ -5,7 +5,7 @@
 </head>
 
 <body>
-	<h2>luv2code Company Home Page</h2>
+	<h2>luv2code Company Home Page - Yaaa!</h2>
 	<hr>
 	
 	Welcome to the luv2code company home page!
