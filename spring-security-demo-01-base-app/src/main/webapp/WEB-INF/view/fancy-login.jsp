@@ -46,7 +46,7 @@
 										
 								<!-- Check for login error -->
 	
-								<c:if test="${param.error != null}">
+								<c:if test="${param.error != null}"> <!-- Spring Security send this parameter -->
 
 									<div class="alert alert-danger col-xs-offset-1 col-xs-10">
 										Invalid username and password.
@@ -54,11 +54,16 @@
 								
 								</c:if>
 																	
-									<!--		            
+								<!-- Checking for logout -->
+								<c:if test="${param.logout != null}"> <!-- Spring Security send this parameter -->
+
 									<div class="alert alert-success col-xs-offset-1 col-xs-10">
 										You have been logged out.
 									</div>
-								    -->
+								
+								</c:if>			            
+									
+								    
 
 					            </div>
 					        </div>
@@ -84,6 +89,11 @@
 								<button type="submit" class="btn btn-success">Login</button>
 							</div>
 						</div>
+
+						<!-- Adding tokens manually... this part is need if you dont use form:form from Spring  -->
+						<%-- <input type="hidden"
+							   name="${_csrf.parameterName}"
+							   value="${csrf.token}"/> --%> <!-- the token is randoly generate by spring as well as name -->
 
 					</form:form>
 

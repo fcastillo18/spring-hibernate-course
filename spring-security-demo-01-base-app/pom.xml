@@ -18,6 +18,7 @@
 	</properties>
 
 	<dependencies>
+
 	
 		<!-- Spring Security, looking comparabe version that work with Spring Core -->
 		<!-- spring-security-web and spring-security-config -->	
@@ -32,7 +33,14 @@
 		  <artifactId>spring-security-config</artifactId>
 		  <version>${springsecurity.version}</version>
 		</dependency>
-
+		
+		<!-- Add Spring Security Taglibs support-->
+		<dependency>
+		  <groupId>org.springframework.security</groupId>
+		  <artifactId>spring-security-taglibs</artifactId>
+		  <version>${springsecurity.version}</version>
+		</dependency>
+		
 		<!-- Spring MVC support -->
 		<dependency>
 			<groupId>org.springframework</groupId>
