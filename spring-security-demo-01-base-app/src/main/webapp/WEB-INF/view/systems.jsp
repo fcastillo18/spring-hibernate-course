@@ -20,7 +20,7 @@
 	
 	<hr>
 	
-	<a href="${pageContext.request.contextPath}/">Back to Home Page</a>
+	<a href="${pageContext.request.contextPath}/employees">Back to Home Page</a>
 	
 </body>
 </html>

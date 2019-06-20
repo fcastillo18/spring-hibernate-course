@@ -22,21 +22,29 @@
 		<br><br>
 		Role(s): <security:authentication property="principal.authorities"/>
 	</p>
-	<hr>
 	
-	<!-- Add a link to point to /leaders... only for maganers-->
-	<p>
-		<a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
-		(Only for Manager peeps)
- 	</p>
+	
+	<security:authorize access="hasRole('MANAGER')">
+
+		<!-- Add a link to point to /leaders... only for maganers-->
+		<p>
+			<a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+			(Only for Manager peeps)
+	 	</p>
+	 	
+ 	</security:authorize>
  	
  	<hr>
  	
- 	<!-- Add a link to point to /system.... only for admins  -->
-	<p>
-		<a href="${pageContext.request.contextPath}/systems">IT System Meeting</a>
-		(Only for Admin peeps)
- 	</p>
+ 	<security:authorize access="hasRole('ADMIN')">
+ 	
+	 	<!-- Add a link to point to /system.... only for admins  -->
+		<p>
+			<a href="${pageContext.request.contextPath}/systems">IT System Meeting</a>
+			(Only for Admin peeps)
+	 	</p>
+ 	
+ 	</security:authorize>
  	
 	<hr>
 	
