@@ -9,6 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FunRestController {
 		
+	@Value("${coach.name}")
+	private String coachName;
+	@Value("${team.name}")
+	private String teamName;
+	
+	@GetMapping("/teaminfo")
+	public String getTeamInfo() {
+		return "Coach: "+ coachName + " and team: "+ teamName;
+	}
+	
 	// expose "/" that return "Hello World"
 	
 	@GetMapping("/")
@@ -27,6 +37,7 @@ public class FunRestController {
 	public String getDailyFortune() {
 		return "Today is your lucky day.";
 	}
+	
 	
 }
 
