@@ -19,7 +19,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	//@Transactional JPA provides it out of the box
 	public List<Employee> findAll() {
 		
-		return employeeRepository.findAll();
+		return employeeRepository.findAllByOrderByLastNameAsc();
 	}
 
 	@Override
