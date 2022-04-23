@@ -6,7 +6,7 @@
   <packaging>war</packaging>
   
   <properties>
-    <springframework.version>4.3.18.RELEASE</springframework.version>
+    <springframework.version>5.3.19</springframework.version>
     <hibernate.version>5.2.5.Final</hibernate.version>
     <!-- <springframework.version>4.0.2.RELEASE</springframework.version> -->
   </properties>
