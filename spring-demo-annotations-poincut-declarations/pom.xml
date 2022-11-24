@@ -7,7 +7,7 @@
   
   <properties>
     <springframework.version>4.3.18.RELEASE</springframework.version>
-    <hibernate.version>5.2.5.Final</hibernate.version>
+    <hibernate.version>5.3.20.Final</hibernate.version>
     <!-- <springframework.version>4.0.2.RELEASE</springframework.version> -->
   </properties>
   
